@@ -1,0 +1,252 @@
+/*Importamos la fuente externa "Noto Serif"*/
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Descargamos la fuente esterna "Hind Siliguri" con estilo "Bold"*/
+@font-face {/*
+    */
+    font-family: "hind";
+    src: url("../fonts/HindSiliguri-Bold.ttf");
+}
+:root {
+    /*Variables de colores*/
+    --grana: rgb(159, 24, 82);
+    --pastel: rgba(254, 245, 235);
+    --pasteltrans: rgba(254, 245, 235, 0.75);
+    --fondo: beige;
+    --claro: rgb(255, 248, 248);
+    /*Variables de fuentes de texto.*/
+    --texto:  'Roboto Serif', serif;
+}
+
+* {/*Limpiamos el documento de formatos por defecto.*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+.oculta {/*Ocultamos el título de la sección. (Se mantiene por SEO)*/
+    display: none;
+}
+
+/*Fondo de pantalla de la aplicación.*/
+body {
+    background-color: var(--claro);
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #555454;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+
+}
+header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+.logo img {
+    padding-top: 15px;
+    max-width: 100%;
+    height: auto;
+    max-height: 60px;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Principal
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+#principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Sección de Título
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+#titulo{
+    /*Ajustamos tamaño y margen superior.*/
+    margin-top: 40px;
+    width: 90%;
+    display: flex;/*Aplicamos flex para el contenido.*/
+    flex-direction: column;
+    align-items: center;
+}
+
+.fuente-titulo{
+    font-family: var(--marca);/*Aplicamos estilo por variable.*/
+    text-transform: uppercase;/*Transformamos el texto a mayusculas y centramos.*/
+    text-align: center;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Sección de presentación
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+#presentacion{
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    margin: 20px;
+    justify-content: space-between;
+    grid-row-gap: 15px;
+
+
+}
+.contenedor-imagen{
+    width: 100%;
+    height: 100%;
+}
+.contenido-imagen {
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+}
+.contenido-imagen img{
+    width: 100%;
+    height: 100%;
+}
+.creditos-imagen{
+    margin-top: -15px;
+    margin-right: 12px;
+}
+.contenido-creditos-imagen{
+    background-color: aquamarine;
+}
+.fuente-creditos-imagen{
+    text-align: end;
+    font-size: 0.5em;
+}
+
+.contenedor-descripcion h3{
+    text-align: center;
+}
+.contenido-descripcion{
+    margin-top: 10px;
+}
+.cita{
+    width: 200%;
+}
+.contenido-cita{
+    display: flex;
+    justify-content: center;
+    
+}
+#boton{
+    background-color: rgb(45, 93, 227);
+    width: 350px;
+    height: 75px;
+    border-radius: 25px;
+    border: 0cap;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #fff;
+    
+}
+#boton:hover{
+    color: rgb(106, 196, 17);}
+
+    .mapa{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    } 
+.ptexto{
+    margin-inline: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-column-gap: 10px;
+}   
+.pmvtexto {
+    border-radius: 5px;
+    /*Aplicamos una sombra interna para delimitar el contorno.*/
+    box-shadow: inset 0px 0px 5px rgba(138, 137, 137, 0.091);
+    /*grid-area: pmvtexto;/*Aplicamos el nombre de area usado en el contenedor.*/
+    display: flex;/*Aplicamos flex para distribuir el texto y el título.*/
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.pmvtexto p{/*Aplicamos tipo de fuente por variable, y ajustamos al contenedor.*/
+    font-family: var(--texto);
+    margin: 20px;
+    justify-items: center;
+    
+}
+.pmvtexto h3 {/*Aplicamos tipo de fuente por variable, y centramos.*/
+    font-family: var(--marca);
+    text-align: center;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+--- Footer
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+footer {
+    margin-top: 30px;
+    height: 200px;
+    background-color: rgb(46 93 227);
+    /*background-image: url(../img/PiePastel.jpg);/*Usamos imagen como fondo del footer.*/
+    display: flex;/*Aplicamos flex para las dos secciones contenidas.*/
+    flex-direction: column;/*Distribuimos en columna.*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+#legal {/*Contenedor de los links legales.*/
+    margin-top: 15px;
+    display: flex;/*aplicamos flex para los links.*/
+    justify-content: center;
+}
+
+#legal div {/*Centramos y damos margen.*/
+    margin: 15px;
+    text-align: center;
+}
+
+/*Cada uno de los links legales.*/
+.legallink { 
+    font-size: 0.9rem;
+    color: white;
+}
+
+/*En caso de situar el cursor sobre el elmento, cambiamossu color y subrayamos.*/
+.legallink:hover {
+    text-decoration: underline;
+    color: var(--pastel);
+}
+
+/*zona de copyrigth y datos del desarrollador.*/
+#desarrollador {
+    font-family: 'Times New Roman', Times, serif;/*Fuente desde variable.*/
+    margin-right: 20px;
+    margin-bottom: 15px;
+    text-align: right;
+    align-self: flex-end;/*Alineamos a la derecha.*/
+    color: white;/*Color de fuente desde variable.*/
+}
+
+@media (max-width: 800px) {
+    header {
+        height: 100px;
+        padding: 0 10px;
+        justify-self: center;
+    }
+
+    .logo img {
+        max-height: 80px;
+    }
+    #presentacion{
+        grid-template-columns: 1fr;
+    
+    }
+    .cita{
+        width: 100%;
+    }
+}
