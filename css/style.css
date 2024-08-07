@@ -76,6 +76,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
     flex-direction: column;
     align-items: center;
 }
+.contenedor-titulo{
+    width: 100%;
+}
 
 .fuente-titulo{
     font-family: var(--marca);/*Aplicamos estilo por variable.*/
@@ -249,4 +252,7 @@ footer {
     .cita{
         width: 100%;
     }
+
+    #txtcolumnas {column-count: 1;}
+
 }
