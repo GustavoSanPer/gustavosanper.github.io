@@ -32,7 +32,9 @@
 
 /*Fondo de pantalla de la aplicación.*/
 body {
-    background-color: var(--claro);
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 100px auto 150px;
     margin: 0;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
     font-size: 1rem;
@@ -42,26 +44,40 @@ body {
     background-color: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
+    
 
 }
-header {
+.contenedor-header {
     display: flex;
     justify-content: left;
     align-items: center;
-    height: 60px;
     padding: 0 20px;
 }
+.item-logo{
+    padding-top: 10px;
+
+}
+.logo{
+    object-fit: contain;
+}
+.logo img{
+    height: 70px;
+    align-items: center;
+    object-fit: contain;
+}
+/*
 .logo img {
     padding-top: 15px;
     max-width: 100%;
     height: auto;
     max-height: 60px;
-}
+}*/
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Principal
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-#principal{
+.cuerpo{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -70,14 +86,15 @@ Sección de Título
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 #titulo{
     /*Ajustamos tamaño y margen superior.*/
-    margin-top: 40px;
-    width: 90%;
+    margin-top: 5px;
+    width: 100%;
     display: flex;/*Aplicamos flex para el contenido.*/
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .contenedor-titulo{
-    width: 100%;
+    width: 90%;
 }
 
 .fuente-titulo{
@@ -90,35 +107,42 @@ Sección de presentación
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 #presentacion{
-    padding-top: 15px;
-    display: grid;
-    grid-template-columns: 48% 48%;
-    margin: 20px;
-    justify-content: space-between;
-    grid-row-gap: 15px;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: row;
+    /* flex-flow: wrap; */
+    margin: 35px 20px 20px 20px;
+    justify-content: center;
+    column-gap: 20px;
 
 
 }
+
 .contenedor-imagen{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    /* background-color: chocolate; */
 }
-.contenido-imagen {
-    background-color: blue;
+
+
+.contenido-imagen{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    /* object-fit: contain; */
 }
 .contenido-imagen img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    /* object-fit: contain; */
 }
 .creditos-imagen{
-    margin-top: -15px;
+    margin-top: -25px;
     margin-right: 12px;
 }
-.contenido-creditos-imagen{
+/* .contenido-creditos-imagen{
     background-color: aquamarine;
-}
+} */
 .fuente-creditos-imagen{
     text-align: end;
     font-size: 0.5em;
@@ -127,11 +151,21 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 .contenedor-descripcion h3{
     text-align: center;
 }
+.contenedor-descripcion{
+    width: 50%;
+}
 .contenido-descripcion{
+    
     margin-top: 10px;
 }
-.cita{
-    width: 200%;
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Sección de cita
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+#cita{
+    /* border: 1px solid #000; */
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
 }
 .contenido-cita{
     display: flex;
@@ -150,43 +184,143 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
     
 }
 #boton:hover{
-    color: rgb(106, 196, 17);}
+    color: rgb(106, 196, 17);
+}
 
-    .mapa{
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    } 
-.ptexto{
-    margin-inline: 20px;
+    
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Sección de servicios
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+#servicios{
+    display: flex;
+    justify-content: center;
+} 
+.contenedor-servicios{
+    /* min-width: 92%; */
+    width: 95%;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 25px;
+}
+.contenido-servicios p{
+    margin-left: 10px;
+    margin-right: 10px; 
+}
+.contenido-servicios h3{
+    text-align: center;
+    margin: 15px 15px 0 15px;
+}
+.contenido-servicios{
+    /* width: 29%; */
+    
+    background-color: rgba(203, 244, 244, 0.18);
+    border-radius: 15px;
+}
+/* #t01{
+    background-color: blue;
+}
+#t02{
+    background-color: rgb(255, 0, 17);
+}
+#t03{
+    background-color: rgb(0, 255, 128);
+} */
+
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Sección de contacto
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+#contacto{
+    display: flex;
+    justify-content: center;
+    
+    /* overflow: scroll; */
+    
+}
+.contenedor-contacto{
+    /* border: 1px solid #000; */
+    margin-top: 30px;
+    width: 90%;
+    height: 470px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    grid-column-gap: 10px;
-}   
-.pmvtexto {
-    border-radius: 5px;
-    /*Aplicamos una sombra interna para delimitar el contorno.*/
-    box-shadow: inset 0px 0px 5px rgba(138, 137, 137, 0.091);
-    /*grid-area: pmvtexto;/*Aplicamos el nombre de area usado en el contenedor.*/
-    display: flex;/*Aplicamos flex para distribuir el texto y el título.*/
-    flex-direction: column;
+    grid-template-columns: auto  minmax(600px, 1200px);
+    justify-content: center;
+    grid-gap: 20px;
+    
+}
+.contenido-contacto{
+    /* width: 30%; */
+    width: 300px;
+    align-content: center;
+}
+.parrafos-contacto{
+    align-items: end;
+}
+.contenido-contacto  p{
+    text-align: center;
+
+}
+.contenido-contacto  h3{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+#telefono{
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+.mapa{
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: start;
+    /* margin-bottom: 20px; */
+} 
+.mapa iframe{
+    
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+    
+
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+--- Cartas de enlace
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+#cartas{
+    width: 100%;
+    display: flex;
     justify-content: center;
     
 }
-
-.pmvtexto p{/*Aplicamos tipo de fuente por variable, y ajustamos al contenedor.*/
-    font-family: var(--texto);
-    margin: 20px;
-    justify-items: center;
-    
+.contenedor-cartas{
+    /* border: 1px solid #000; */
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
 }
-.pmvtexto h3 {/*Aplicamos tipo de fuente por variable, y centramos.*/
-    font-family: var(--marca);
+.item-card{
+    border-radius: 4px;
+    width: 260px;
+    margin: 25px;
+    background-color: var(--pastel);
+    box-shadow: 0px 15px 25px rgb(0, 0, 0, 0.50);
+}
+.item-img{
+    border-radius: 4px 4px 0 0;
+    width:100%;
+    height:auto;
+}
+.ftexto{
     text-align: center;
+    margin-top: 5px;
+    font-size: 0.8rem;
 }
-
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 --- Footer
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
@@ -235,24 +369,58 @@ footer {
     color: white;/*Color de fuente desde variable.*/
 }
 
-@media (max-width: 800px) {
-    header {
-        height: 100px;
-        padding: 0 10px;
-        justify-self: center;
-    }
 
+
+@media (max-width: 1024px) {
+    .contenedor-header {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    
     .logo img {
         max-height: 80px;
     }
-    #presentacion{
+    #presentacion{/*
         grid-template-columns: 1fr;
-    
+        object-fit: contain;
+        justify-content: center;*/
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+        
+    }
+    .contenedor-imagen{
+        width: 80%;
+        /* background-color: chocolate; */
+    }
+    .contenido-imagen img{
+        max-width: 600px;
+    }
+    .contenedor-descripcion{
+        width: 90%;
     }
     .cita{
         width: 100%;
     }
+    
+    .contenedor-servicios{
+        flex-direction: column;
+    }
+    #contacto{
+        /* flex-direction: column; */
+        
+    }
+    iframe {
+        /* max-width: 100%;
+        height: auto; */
+    }
+    
+}
+@media (max-width: 768px) {
 
-    #txtcolumnas {column-count: 1;}
+}
+@media (max-width: 480px) {
 
 }
