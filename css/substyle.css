@@ -78,13 +78,6 @@ header, main{
     align-items: center;
     object-fit: contain;
 }
-/*
-.logo img {
-    padding-top: 15px;
-    max-width: 100%;
-    height: auto;
-    max-height: 60px;
-}*/
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Principal
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -120,7 +113,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 Sección de presentación
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-#presentacion{
+.pres-sub{
     /* border: 1px solid #000; */
     display: flex;
     flex-direction: row;
@@ -130,10 +123,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
     column-gap: 20px;
 }
 
-.contenedor-imagen{
-    
-    width: 50%;
-    height: auto;
+.contenedor-imagen-sub{
+    margin-top: 50px;
+    width: 30%;
     /* background-color: chocolate; */
 }
 
@@ -142,7 +134,6 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
     object-fit: cover;
     /* object-fit: contain; */
 }
@@ -168,11 +159,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
     font-size: 0.5em;
 }
 
-.contenedor-descripcion h2{
+h3{
     text-align: center;
 }
-.contenedor-descripcion{
-    width: 50%;
+.contenedor-descripcion-sub{
+    width: 65%;
 }
 .contenido-descripcion{
     margin-top: 10px;
@@ -216,251 +207,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
     color: rgb(106, 196, 17);
 }
 
-    
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Sección de servicios
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-#servicios{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-} 
-.contenedor-servicios{
-    /* min-width: 92%; */
-    width: 95%;
-    /* border: 1px solid #000; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 25px;
-}
-.contenido-servicios p{
-    margin-left: 10px;
-    margin-right: 10px; 
-}
-.contenido-servicios h3{
-    text-align: center;
-    margin: 15px 15px 0 15px;
-}
-.contenido-servicios{
-    /* width: 29%; */
-    
-    background-color: #f8fafd;
-    border-radius: 15px;
-}
-/* #t01{
-    background-color: blue;
-}
-#t02{
-    background-color: rgb(255, 0, 17);
-}
-#t03{
-    background-color: rgb(0, 255, 128);
-} */
 
-
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Sección de contacto
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-#contacto{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    
-    /* overflow: scroll; */
-    
-}
-.contenedor-contacto{
-    /* border: 1px solid #000; */
-    margin-top: 30px;
-    width: 90%;
-    height: 470px;
-    display: grid;
-    grid-template-columns: auto  minmax(600px, 1200px);
-    justify-content: center;
-    grid-gap: 20px;
-    
-}
-.contenido-contacto{
-    /* width: 30%; */
-    width: 300px;
-    align-content: center;
-}
-.parrafos-contacto{
-    align-items: end;
-}
-.contenido-contacto  p{
-    text-align: center;
-
-}
-.contenido-contacto  h3{
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-#telefono{
-    margin-top: 15px;
-    font-size: 1.5rem;
-}
-.mapa{
-    /* margin-top: 20px; */
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    /* margin-bottom: 20px; */
-} 
-.mapa iframe{
-    
-    width: 95%;
-    height: auto;
-    object-fit: cover;
-    
-
-}
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
---- Cartas de enlace
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-#cartas{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-}
-.contenedor-cartas{
-    /* border: 1px solid #000; */
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 30px;
-}
-.ftexto{
-    text-align: center;
-    margin-top: 5px;
-    font-size: 0.8rem;
-}
-.item-card{
-    border-radius: 4px;
-    width: 260px;
-    margin: 25px;
-    background-color: rgba(248, 250, 253);
-    background-color: #c2e7ff;
-    box-shadow: 0px 15px 25px rgb(0, 0, 0, 0.50);
-}
-.item-card a{
-    color: #18046b;  
-}
-.item-card a:hover{
-    color: #0bc75c;  
-}
-.item-card:hover{
-    box-shadow: 0px 15px 25px rgba(194, 231, 255, 0.5);  
-}
-.item-card:active{
-    padding: 1px;
-}
-.item-img{
-    border-radius: 4px 4px 0 0;
-    width:100%;
-    height:auto;
-}
-/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
---- Formulario
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
-
-#formulario{
-    width: 100%;
-
-}
-.contenedor-formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
-.titulo-form{
-    background-color: #c2e7ff;
-    width: 85%;
-    height: 75px;
-    border-radius: 25px;
-    border: 0cap;
-    font-weight: bolder;
-    font-size: 1.5em;
-    color: #fff;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-/* .titulo-form:hover{
-    background-color: rgb(106, 196, 17);
-    } */
-
-       
-.titulo-form h2{
-    text-align: center;
-}
-#fparrafo{
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.cform { 
-    border-radius: 25px;
-    background-color: #f8fafd;
-    max-width: 400px; 
-    margin: auto; 
-    margin-top: 35px;
-    padding: 20px; 
-}
-/* .cinput:focus-visible {
-    border: 4px solid yellow;
-    border: none;
-    border-bottom-color: #0bc75c;
-} */
-.cinput, #mensaje {
-    border-radius: 25px;
-    box-shadow: 0px 15px 25px rgba(194, 231, 255, 0.5);
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: none;
-    font-size: 16px;
-    outline: none;
-}
-.cinput::placeholder{
-    font-size: 16px;
-}
-.cinput_contenedor{
-    width: 320px;
-    position: relative;
-    margin-bottom: 25px;
-    left: 30px;
-}
-.input-icon{
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    left: -30px;
-    top: 50%;
-    color: #700808;
-    transform: translateY(-55%);
-}
-.cbutton { 
-    border-radius: 25px;
-    padding: 10px 20px; 
-    background-color: #c2e7ff; 
-    color: white; 
-    border: none; 
-    cursor: pointer; 
-}
-.cbutton:hover { 
-    background-color: rgba(194, 231, 255);
-}
-.cbutton:active{
-    padding: 11px 21px;
-    color: #0bc75c;
-    /* box-shadow: 0px 15px 25px rgba(194, 231, 255, 0.5); */
-}
 
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 --- Footer
